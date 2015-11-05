@@ -1,5 +1,5 @@
 QUIET		?= @
-PREFIX		?= ..
+PREFIX		?= ../
 INCPATH		?= $(PREFIX)/include/Tempo
 LIBPATH		?= $(PREFIX)/lib
 BINPATH		?= $(PREFIX)/bin

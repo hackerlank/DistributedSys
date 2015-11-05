@@ -5,7 +5,7 @@
 * Support for user-defined high-level SLAs
 * Safe in production: adaptive tuning of scheduler configurations
 
-###Main Components:
+###Main Components
 | Module | |
 |--------|:---:|
 | script/extractor | Hadoop job history parser |

@@ -14,8 +14,7 @@
 | others | More apps based on Tempo library |
 
 ###Requirements
-
-libconfig: http://www.hyperrealm.com/libconfig/
-ulib: https://code.google.com/p/ulib/
-gsl: http://www.gnu.org/software/gsl/gsl.html
-glpk: http://www.gnu.org/software/glpk/
+* libconfig: http://www.hyperrealm.com/libconfig/
+* ulib: https://code.google.com/p/ulib/
+* gsl: http://www.gnu.org/software/gsl/gsl.html
+* glpk: http://www.gnu.org/software/glpk/

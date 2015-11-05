@@ -1,0 +1,50 @@
+CWSC is a fair scheduler predictor which predicts the task attempt
+schedule for given workload. The input is a the dataset provided by
+the extractor, and the output involves the predicted start time and
+finish time of every task attempt.
+
+Each row of the output consists of the following columns:
+
+     pool job:weight task type ctime ptime stime stime1 ftime ftime1
+
+where columns are delimited by "\t", and the meaning of each column
+
+     pool:   pool name, a string
+     job:    hashed job id, a hex number string
+     weight: a numeric number
+     task:   hashed task id
+     type:   1 - map, 0 - reduce
+     ctime:  task creation time, i.e. the time the task becomes
+     	      visible to the scheduler
+     ptime:  task duration
+     stime:  real start time of the task attempt
+     stime1: predicted start time of the task attempt
+     ftime:  real finish time of the task attempt
+     ftime1: predicted finish time of the task attempt
+      
+The input of the predictor is produced using the script ds2w.awk under
+data/. Specifically, the following command is used
+
+     $awk -f data/ds2w.awk path_to_dataset_file > data/input_file_name
+
+Users also need to specify the input_file_name in conf/cwsc.conf
+accordingly.
+
+To start the predictor, simply run ./run.sh in the shell. The run.sh
+will show the prediction progress of Map and Reduce on the console,
+and write a log file under log/, of which the name is in format
+"MMDD-HHmmSS." The log file contains information about preemption and
+effective utilization.
+
+As the predictor runs, a metric file is also written. The metric file
+name is specified in conf/cwsc.conf as well. The metric file contains
+sample values of certain metrics. Each row of the metric file is in
+the following format:
+
+    timestamp metric value
+
+The "metrics_win" option in conf/cwsc.conf is used to specify the
+sampling window size, in number of events. However, the interval
+between two events varies depending on the workload and
+configuration. One may need to try different sampling window sizes to
+get desired metrics.

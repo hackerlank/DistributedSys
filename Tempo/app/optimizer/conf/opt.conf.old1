@@ -1,0 +1,48 @@
+cluster:
+{
+  total_maps = 8;
+  total_reduces = 8;
+};
+
+pools:
+  (
+    { name = "engineer";
+      min_share_timeout = 600.0;
+      fair_share_timeout = 300.0;
+      weight = 1.0;
+      slack = -1.0;
+      map_min_share = 0;
+      reduce_min_share = 0;
+      sched_mode = "fair"; },
+
+    { name = "prod";
+      min_share_timeout = 10.0;
+      fair_share_timeout = 5.0;
+      weight = 6.0;
+      slack = 300.0;
+      map_min_share = 3;
+      reduce_min_share = 2;
+      sched_mode = "fair"; },
+
+    { name = "modeling";
+      min_share_timeout = 30.0;
+      fair_share_timeout = 10.0;
+      weight = 4.0;
+      slack = -1.0;
+      map_min_share = 0;
+      reduce_min_share = 0;
+      sched_mode = "fair"; }
+  );
+
+optimizer:
+{
+  number_of_iterations = 300;
+  batch_size = 2;
+  exploration_degree = 1.0;
+  learning_rate = 3.0;
+  regularization = 0.001;
+  bandwidth = 4.0;
+  strict = true;
+  workload   = "data/workload"
+  trajectory = "output/traj.txt"
+};

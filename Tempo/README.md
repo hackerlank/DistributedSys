@@ -1,4 +1,4 @@
-###Tempo - Hadoop Resource Scheduling Framework with Robust SLA Compliance
+###Tempo - A Hadoop Resource Scheduling Framework with Robust SLA Compliance
 
 ###Features
 * Provable SLA compliance

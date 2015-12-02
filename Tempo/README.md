@@ -13,9 +13,9 @@ Tempo is a framework that brings several desirable properties to existing RMs:
 ###Main Components
 | Module | |
 |--------|:---:|
-| script/extractor | Hadoop job history parser |
-| app/sched_pred | Task schedule predictor |
-| app/optimizer | Fair Scheduler configuration optimizer |
+| script/extractor | Hadoop log analyzer. |
+| app/sched_pred | High-performance RM simulator. |
+| app/optimizer | Tempo control loop. |
 | others | More apps based on Tempo library |
 
 ###Requirements

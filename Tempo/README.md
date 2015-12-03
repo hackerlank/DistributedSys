@@ -10,6 +10,8 @@ Tempo is a framework that brings several desirable properties to existing RMs:
   * Deliver max-min fairness over *SLOs*, when resources are insufficient to meet all performance requirements.
   * Safe to be used in production.
 
+Detailed description of Tempo can be found in our [paper](http://arxiv.org/abs/1512.00757).
+
 ###Main Components
 | Module | |
 |--------|:---:|

@@ -1,6 +1,6 @@
 ###Tempo - Robust and Self-Tuning Resource Management in Multi-tenant Parallel Databases
 
-Popular cluster resource managers (RMs) today do not provide direct support for performance objectives such as: “Average job response time of tenant A must be less than two minutes”, or “No more than 5% of tenant B’s jobs can miss the deadline of 1 hour.” Thus, DBAs have to tinker with the RM’s low-level configuration settings to meet such objectives.
+Popular cluster resource managers (RMs) today do not provide direct support for performance objectives such as: “Average job response time of tenant A must be less than two minutes”, or “No more than 5% of tenant B’s jobs can miss the deadline of 1 hour.” Thus, cluster operators have to tinker with the RM’s low-level configuration settings to meet such objectives.
 
 Tempo is a framework that brings several desirable properties to existing RMs:
 * *Simplicity.* Tempo a simple interface for DBAs to specify performance objectives (SLOs) declaratively.

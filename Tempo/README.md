@@ -6,7 +6,7 @@ Tempo is a framework that brings several desirable properties to existing RMs:
 * *Simplicity.* Tempo a simple interface for DBAs to specify performance objectives (SLOs) declaratively.
 * *Self-tuning.* Tempo adapts to workload patterns and variations.
 * *Robustness.*
-  * Makeshigh-quality resource scheduling decisions in presence of noise, e.g., job failures, commonly observed in production database systems.
+  * Makes high-quality resource scheduling decisions in presence of noise, e.g., job failures, commonly observed in production database systems.
   * Delivers provably end-to-end tenant performance isolation with Pareto-optimal SLOs. This is often more desirable than traditional resource isolation.
   * When all SLOs cannot be satisfied—which is common in busy database systems—Tempo guarantees max-min fairness over SLO satisfactions.
   * Adapts to workload patterns and variations.

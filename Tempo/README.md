@@ -6,11 +6,13 @@ Tempo is a framework that brings several desirable properties to existing RMs:
 * *Simplicity.* Tempo a simple interface for DBAs to specify performance objectives (SLOs) declaratively.
 * *Self-tuning.* Tempo adapts to workload patterns and variations.
 * *Robustness.*
-  * Provable convergence of Tempo to deliver Pareto-optimal resource allocations.
-  * Deliver max-min fairness over *SLOs*, when resources are insufficient to meet all performance requirements.
-  * Safe to be used in production.
+  * Makeshigh-quality resource scheduling decisions in presence of noise, e.g., job failures, commonly observed in production database systems.
+  * Delivers provably end-to-end tenant performance isolation with Pareto-optimal SLOs. This is often more desirable than traditional resource isolation.
+  * When all SLOs cannot be satisfied—which is common in busy database systems—Tempo guarantees max-min fairness over SLO satisfactions.
+  * Adapts to workload patterns and variations.
+  * Reduces the risk of major performance regression while being applied to production database systems.
 
-The detailed description of Tempo can be found in our [paper](http://arxiv.org/abs/1512.00757).
+The detailed description of Tempo can be found in our [paper](http://arxiv.org/abs/1512.00757). Implementation of the numerical algorithm is avaiable at: [PALD](https://github.com/ZilongTan/Algorithms/tree/master/PALD).
 
 ###Main Components
 | Module | |

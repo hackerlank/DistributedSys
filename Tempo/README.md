@@ -12,7 +12,7 @@ Tempo is a framework that brings several desirable properties to existing RMs:
   * Adapts to workload patterns and variations.
   * Reduces the risk of major performance regression while being applied to production database systems.
 
-The detailed description of Tempo can be found in our [paper](http://arxiv.org/abs/1512.00757). Implementation of Tempo's optimization algorithm is avaiable at: [PALD](https://github.com/ZilongTan/Algorithms/tree/master/PALD).
+The detailed description of Tempo can be found in our [paper](http://arxiv.org/abs/1512.00757).
 
 ###Main Components
 | Module | |

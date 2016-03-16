@@ -14,6 +14,8 @@ Tempo is a framework that brings several desirable properties to existing RMs:
 
 The detailed description of Tempo can be found in our [paper](http://arxiv.org/abs/1512.00757).
 
+Workloads, configurations, and experiments are located under the experiments folder.
+
 ###Main Components
 | Module | |
 |--------|:---:|

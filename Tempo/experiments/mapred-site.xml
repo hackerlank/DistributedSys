@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+<configuration>
+
+<!-- FAIR SCHEDULAR RELATED -->
+<property>
+ <name>mapred.queue.names</name>
+   <value>BI,DEV,APP,STR,MV,ETL</value>
+</property>
+<property>
+ <name>mapred.fairscheduler.allocation.file</name>
+ <value>/home/hadoop/conf/fair-scheduler.xml</value>
+ </property>
+<property>
+ <name>mapred.fairscheduler.preemption</name>
+ <value>true</value>
+ </property>
+<property>
+ <name>mapred.fairscheduler.sizebasedweight</name>
+ <value>false</value>
+ </property>
+<property>
+ <name>mapred.fairscheduler.poolnameproperty</name>
+ <value>mapred.job.queue.name</value>
+ </property>
+<property>
+  <name>mapred.jobtracker.taskScheduler</name>
+  <value>org.apache.hadoop.mapred.FairScheduler</value>
+</property>
+
+<!-- Speculative Execution -->
+<property>
+  <name>mapred.reduce.tasks.speculative.execution</name>
+  <value>true</value>
+</property>
+<property>
+  <name>mapred.map.tasks.speculative.execution</name>
+  <value>true</value>
+</property>
+
+</configuration>

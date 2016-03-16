@@ -1,0 +1,47 @@
+#blabla
+<configuration>
+
+
+
+  <property>
+    <name>yarn.web-proxy.address</name>
+    <value>ip-172-31-53-10.ec2.internal:20888</value>
+  </property>
+
+
+  <property>
+    <name>yarn.resourcemanager.resource-tracker.address</name>
+    <value>ip-172-31-53-10.ec2.internal:8025</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.address</name>
+    <value>ip-172-31-53-10.ec2.internal:8032</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.scheduler.address</name>
+    <value>ip-172-31-53-10.ec2.internal:8030</value>
+  </property>
+
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle,</value>
+  </property>
+
+  <property>
+    <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>
+
+  <property>
+    <name>yarn.log-aggregation-enable</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>yarn.log.server.url</name>
+    <value>http://ip-172-31-53-10.ec2.internal:19888/jobhistory/logs</value>
+  </property>
+
+</configuration>

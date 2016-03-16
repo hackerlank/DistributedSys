@@ -1,3 +1,3 @@
 # Projects on Distributed Systems
 
-* Tempo - Hadoop Resource Scheduling Framework with Robust SLA Compliance
+* Tempo - Robust and Self-Tuning Resource Management in Multi-tenant Parallel Databases

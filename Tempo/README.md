@@ -1,16 +1,25 @@
-###Tempo - Hadoop Resource Scheduling Framework with Robust SLA Compliance
+###Tempo - Robust and Self-Tuning Resource Management in Multi-tenant Parallel Databases
 
-###Features
-* Provable SLA compliance
-* Support for user-defined high-level SLAs
-* Safe in production: adaptive tuning of scheduler configurations
+Popular cluster resource managers (RMs) today do not provide direct support for performance objectives such as: “Average job response time of tenant A must be less than two minutes”, or “No more than 5% of tenant B’s jobs can miss the deadline of 1 hour.” Thus, cluster operators have to tinker with the RM’s low-level configuration settings to meet such objectives.
+
+Tempo is a framework that brings several desirable properties to existing RMs:
+* *Simplicity.* Tempo a simple interface for DBAs to specify performance objectives (SLOs) declaratively.
+* *Self-tuning.* Tempo adapts to workload patterns and variations.
+* *Robustness.*
+  * Makes high-quality resource scheduling decisions in presence of noise, e.g., job failures, commonly observed in production database systems.
+  * Delivers provably end-to-end tenant performance isolation with Pareto-optimal SLOs. This is often more desirable than traditional resource isolation.
+  * When all SLOs cannot be satisfied—which is common in busy database systems—Tempo guarantees max-min fairness over SLO satisfactions.
+  * Adapts to workload patterns and variations.
+  * Reduces the risk of major performance regression while being applied to production database systems.
+
+The detailed description of Tempo can be found in our [paper](http://arxiv.org/abs/1512.00757).
 
 ###Main Components
 | Module | |
 |--------|:---:|
-| script/extractor | Hadoop job history parser |
-| app/sched_pred | Task schedule predictor |
-| app/optimizer | Fair Scheduler configuration optimizer |
+| script/extractor | Hadoop log analyzer. |
+| app/sched_pred | High-performance RM simulator. |
+| app/optimizer | Tempo control loop. |
 | others | More apps based on Tempo library |
 
 ###Requirements

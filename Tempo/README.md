@@ -29,3 +29,19 @@ Workloads, configurations, and experiments are located under the experiments fol
 * ulib: https://code.google.com/p/ulib/
 * gsl: http://www.gnu.org/software/gsl/gsl.html
 * glpk: http://www.gnu.org/software/glpk/
+* PALD: https://github.com/ZilongTan/Algorithms/tree/master/PALD
+
+### Installation
+1. Perform a system-wide installation of the above required dependency libraries. See the installation instructions at respective websites.
+2. Checkout the source code, and place the Tempo source dir to a sibling path of the ulib. For example, /tmp/Tempo and /tmp/ulib.
+3. Copy the libpald.a in PALD/lib to Tempo/lib/
+4. cd to Tempo and perform a 'make'
+
+At this point, Tempo has been compiled as a framework library. To use the library, you need the driver programs which include, for example, SLO definitions and optimization objectives.
+
+### Example Drivers
+Two example drivers are provided under Tempo/app:
+  * optimizer: driver for computing a Pareto-optimal RM configuration. The driver supports SLOs namely, deadlines, job response time, and resource utilization.
+  * sched_pred: driver for predicting the task schedule of a given workload.
+
+These are example drivers which aim to help users develop specific solutions. Information regarding how to configure the drivers can be found under app/optimizer/conf/opt.conf and app/sched_pred/conf/cwsc.conf.

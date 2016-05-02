@@ -1,5 +1,5 @@
 #include <time.h>
-#include <Tempo/Tempo.hpp>
+#include <Tempo/tempo.hpp>
 
 int main()
 {

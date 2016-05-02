@@ -12,17 +12,33 @@
  * binding.
  */
 
-#include <cstdio>
-#include "Tempo.hpp"
+#ifndef _COLOSSAL_JOB_H
+#define _COLOSSAL_JOB_H
+
+#include <string>
+#include <vector>
+#include "task.hpp"
+#include "fsched.hpp"
 
 namespace Tempo
 {
 
-char g_version[] = VERSION"\t"BUILDTIME;
-
-const char *get_version()
+struct job
 {
-        return g_version;
-}
+	typedef std::vector<task> task_container_type;
+
+        uint64_t   id;
+	double     ctime;
+	double     ftime;
+	fs_context fs_ctx_map;
+	fs_context fs_ctx_reduce;
+        task_container_type tasks[task::TASK_TYPE_NUM];
+
+	static uint64_t id_from_str(const char *str);
+
+        std::string to_str(const char *prefix = "") const;
+};
 
 }
+
+#endif

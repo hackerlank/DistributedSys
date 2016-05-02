@@ -3,8 +3,8 @@ QUIET		?= @
 INCPATH		= ../../include
 LIBPATH		= ../../lib
 
-EXTRAINC	?= -I../../../ulib/include -I../../../libconfig/include
-EXTRALIB	?= -L../../../ulib/lib -lulib ../../../libconfig/lib/libconfig++.a
+EXTRAINC	?= -I../../../ulib/include
+EXTRALIB	?= -L../../../ulib/lib -lulib -lconfig++
 
 CXXFLAGS	?= -O3 -flto -W -Wall
 LDFLAGS		?= -lTempo $(EXTRALIB)

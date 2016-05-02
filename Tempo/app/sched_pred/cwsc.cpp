@@ -19,7 +19,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <libconfig.h++>
-#include <Tempo/Tempo.hpp>
+#include <Tempo/tempo.hpp>
 
 using namespace std;
 using namespace Tempo;

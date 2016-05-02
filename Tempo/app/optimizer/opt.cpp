@@ -23,7 +23,7 @@
 #include <gsl/gsl_blas.h>
 #include <libconfig.h++>
 #include <ulib/hash_open.h>
-#include <Tempo/Tempo.hpp>
+#include <Tempo/tempo.hpp>
 
 using namespace std;
 using namespace ulib;

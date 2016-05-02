@@ -4,7 +4,7 @@ INCPATH		= ../../include
 LIBPATH		= ../../lib
 
 EXTRAINC	?= -I../../../ulib/include -I../../../libconfig/include
-EXTRALIB	?= -lpald -lglpk -lcblas -L../../../ulib/lib -lulib ../../../libconfig/lib/libconfig++.a
+EXTRALIB	?= -lpald -lglpk -lcblas -L../../../ulib/lib -lulib -lconfig++
 
 CXXFLAGS	?= -g3 -O3 -W -Wall
 LDFLAGS		?= -lTempo -lgsl $(EXTRALIB)
